@@ -1,4 +1,4 @@
-<div class="col-sm-3 order-first sidebar">
+<div class="col-sm-3 sidebar order-sm-1">
 <?php 
 	if(is_home() ) {
 		if ( is_active_sidebar( 'sidebar-2' ) ) : 
