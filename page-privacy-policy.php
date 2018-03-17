@@ -5,7 +5,7 @@
 <div class="container-fluid container-padding">
 	<div class="container">
 		<div class="row">
-			<div class="col-sm-9">
+			<div class="col-sm-9 order-sm-2">
 			<h2>Your Privacy</h2>
 			<p><?php bloginfo('name'); ?> has a privacy policy that is very strict, and designed to protect our users. Any demographic information that may be collected, including email addresses will not be sold or distributed in any way. It will only be used in order to better understand who our users are so that we may modify our site to better meet the needs of our users.</p>
 
