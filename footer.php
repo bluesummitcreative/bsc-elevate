@@ -11,5 +11,10 @@
 		
 	</footer>
 	<?php wp_footer(); ?>
+	<script>
+		$('.carousel').carousel({
+		  interval: 2000
+		})
+	</script>
 	</body>
 </html>
