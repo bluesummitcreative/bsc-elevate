@@ -1,3 +1,5 @@
+<?php if( get_field('slider') ): ?>
 <div class="slider">
-	 <?php echo do_shortcode('[rev_slider alias="image-hero3"]'); ?>
+	 <?php echo do_shortcode(the_field('slider')); ?>
 </div>
+<?php endif; ?>
