@@ -9,15 +9,17 @@
 	<body <?php body_class(); ?>>
 	
 	<header class="header fixed-top">
+		<?php if ( get_field( 'top_bar_content' ) ): ?>
 		<div class="container-fluid top-bar text-right bg-primary">
 			<div class="container">
 				<div class="row">
 					<div class="col-sm-12">
-						<?php echo get_theme_mod( 'top_bar_text' ); ?>
+						<?php the_field( 'top_bar_content' ); ?>
 					</div>
 				</div>
 			</div>
 		</div>
+		<?php endif; ?>
 	  	<nav class="navbar navbar-expand-md navbar-light">		 
 		  <div class="container">
 			<a class="navbar-brand" href="<?php echo esc_url(home_url()); ?>">
