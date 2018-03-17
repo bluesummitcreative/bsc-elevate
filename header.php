@@ -20,7 +20,15 @@
 		</div>
 	  	<nav class="navbar navbar-expand-md navbar-light">		 
 		  <div class="container">
-			  <a class="navbar-brand" href="<?php echo esc_url(home_url()); ?>"><?php $custom_logo_id = get_theme_mod( 'custom_logo' ); $logo = wp_get_attachment_image_src( $custom_logo_id , 'full' ); if ( has_custom_logo() ) { echo '<img alt="'. get_bloginfo( 'name' ).' logo" src="'. esc_url( $logo[0] ) .'">'; } else { echo '<h2>'. get_bloginfo( 'name' ).'</h2>'; } ?></a>
+			<a class="navbar-brand" href="<?php echo esc_url(home_url()); ?>">
+
+			<?php if ( get_field( 'logo','option' ) ): ?>
+			<img alt="<?php bloginfo( 'name' ); ?> logo" src="<?php the_field('logo', 'option'); ?>" />'
+			<?php else: ?>
+			<h2><?php bloginfo( 'name' ); ?></h2>
+			<?php endif; ?>
+
+			</a>
 			  	
 			  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 			  <span class="navbar-toggler-icon"></span>
