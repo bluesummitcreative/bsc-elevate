@@ -9,12 +9,12 @@
 	<body <?php body_class(); ?>>
 	
 	<header class="header fixed-top">
-		<?php if ( get_field( 'top_bar_content' ) ): ?>
+		<?php if ( get_field( 'top_bar_content', 'option' ) ): ?>
 		<div class="container-fluid top-bar text-right bg-primary">
 			<div class="container">
 				<div class="row">
 					<div class="col-sm-12">
-						<?php the_field( 'top_bar_content' ); ?>
+						<?php the_field( 'top_bar_content', 'option' ); ?>
 					</div>
 				</div>
 			</div>
