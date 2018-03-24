@@ -12,7 +12,7 @@
     <div class="carousel-item">
 	  <img class="d-block w-100" src="http://via.placeholder.com/1920x800" alt="Second slide">
 	  <div class="carousel-caption d-none d-md-block">
-	    <h5>Slide two</h5>
+	    <h5>Slide two - test!</h5>
 	    <p>With Caption</p>
 	  </div>
 	</div>
