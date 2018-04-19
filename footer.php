@@ -1,5 +1,5 @@
 	<footer class="footer">
-		<div class="container-fluid">
+		<div class="container-fluid footer-widgets">
 			<div class="container">
 				<div class="row">
 					<?php
