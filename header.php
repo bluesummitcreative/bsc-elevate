@@ -25,7 +25,7 @@
 			<a class="navbar-brand" href="<?php echo esc_url(home_url()); ?>">
 
 			<?php if ( get_field( 'logo','option' ) ): ?>
-			<img alt="<?php bloginfo( 'name' ); ?> logo" src="<?php the_field('logo', 'option'); ?>" />'
+			<img alt="<?php bloginfo( 'name' ); ?> logo" src="<?php the_field('logo', 'option'); ?>" />
 			<?php else: ?>
 			<h2><?php bloginfo( 'name' ); ?></h2>
 			<?php endif; ?>
