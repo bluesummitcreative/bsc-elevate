@@ -21,7 +21,7 @@
         $classes[] = 'nav-item';
         $classes[] = 'nav-item-' . $item->ID;
         if( $depth && $args->walker->has_children ){
-            $classes[] = 'dropdown-menu';
+            $classes[] = 'menu-item-has-children';
         }
         
         $class_names =  join(' ', apply_filters('nav_menu_css_class', array_filter( $classes ), $item, $args ) );
