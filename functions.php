@@ -3,6 +3,7 @@
 	require_once('functions/custom-walker.php');
 	require_once('functions/register-menus.php');	
 	require_once('functions/register-sidebars.php');
+	require_once('functions/shortcodes.php');
 	require_once('functions/theme-setup.php');
 	require_once('functions/woocommerce.php');
 ?>
