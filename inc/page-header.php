@@ -1,7 +1,7 @@
 <?php if ( is_home() ) { ?>
-<div class="container-fluid page-header" style="background:url(<?php if ( get_field( 'image', get_option('page_for_posts') ) ): the_field('image', get_option('page_for_posts')); else: header_image(); endif;?>) no-repeat;background-size:cover;background-position:center center;">
+<div class="container-fluid page-header" style="background:url(<?php if ( get_field( 'image', get_option('page_for_posts') ) ): the_field('image', get_option('page_for_posts')); else: the_field('default_secondary_page_header', 'option'); endif;?>) no-repeat;background-size:cover;background-position:center center;">
 <?php } else { ?>
-<div class="container-fluid page-header" style="background:url(<?php if ( get_field( 'page_header_image' ) ): the_field('page_header_image'); else: header_image(); endif;?>) no-repeat;background-size:cover;background-position:center center;">
+<div class="container-fluid page-header" style="background:url(<?php if ( get_field( 'page_header_image' ) ): the_field('page_header_image'); else: the_field('default_secondary_page_header', 'option'); endif;?>) no-repeat;background-size:cover;background-position:center center;">
 <?php } ?>
 	<div class="container">
 		<div class="row">
