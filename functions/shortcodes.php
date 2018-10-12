@@ -12,4 +12,11 @@
 		return '<a href="'.$bsc_siteurl.'">'.$bsc_siteurl.'</a>';
 	}
 	add_shortcode( 'siteurl', 'bsc_siteurl_shortcode' );
+
+	// Blog Name
+	function bsc_blogname_shortcode() {
+		$bsc_blogname = get_option('blogname');
+		return $bsc_blogname;
+	}
+	add_shortcode( 'blogname', 'bsc_blogname_shortcode' );
 ?>
