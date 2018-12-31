@@ -3,20 +3,8 @@
 			<div class="container">
 				<div class="row">
 					<?php
-						if ( is_active_sidebar( 'footer-widget-1' ) ) : 
-							dynamic_sidebar( 'footer-widget-1' ); 
-						endif;
-					
-						if ( is_active_sidebar( 'footer-widget-2' ) ) : 
-							dynamic_sidebar( 'footer-widget-2' ); 
-						endif;
-
-						if ( is_active_sidebar( 'footer-widget-3' ) ) : 
-							dynamic_sidebar( 'footer-widget-3' ); 
-						endif;
-
-						if ( is_active_sidebar( 'footer-widget-4' ) ) : 
-							dynamic_sidebar( 'footer-widget-4' ); 
+						if ( is_active_sidebar( 'footer' ) ) : 
+							dynamic_sidebar( 'footer' ); 
 						endif;
 					?>
 				</div>
