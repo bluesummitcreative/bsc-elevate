@@ -1,13 +1,13 @@
 	<footer class="footer">
-		<?php if ( is_active_sidebar( 'footer' ) ) : ?>
 		<div class="container-fluid footer-widgets">
 			<div class="container">
 				<div class="row">
-					<?php dynamic_sidebar( 'footer' ); ?>
+					<?php if ( is_active_sidebar( 'footer' ) ) : 
+						dynamic_sidebar( 'footer' );
+					endif; ?>
 				</div>
 			</div>
 		</div>
-		<?php endif; ?>
 		<div class="container-fluid">
 			<div class="container">
 				<div class="row">
