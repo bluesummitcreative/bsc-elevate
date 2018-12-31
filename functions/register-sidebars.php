@@ -1,4 +1,18 @@
 <?php
+	//Widget Counter
+	function custom_widgets_count($params) {
+ 
+	  $sidebar_id = $params[0]['id'];
+	    /* Footer widgets */
+	    if ( $sidebar_id == 'sidebar-footer' ) {
+		$total_widgets = wp_get_sidebars_widgets();
+		$sidebar_widgets = count($total_widgets[$sidebar_id]);
+		$params[0]['before_widget'] = str_replace('class="', 'class="col-md-' . floor(12 / $sidebar_widgets) . ' ', $params[0]['before_widget']);
+	    }
+	  return $params;
+	}
+	add_filter('dynamic_sidebar_params','custom_widgets_count');
+
 	// Register Sidebars
 	function custom_sidebars() {
 		register_sidebar( 
@@ -35,18 +49,5 @@
 		);
 		
 	}
-	add_action( 'widgets_init', 'custom_sidebars' );
-	//Widget Counter
-	function custom_widgets_count($params) {
- 
-	  $sidebar_id = $params[0]['id'];
-	    /* Footer widgets */
-	    if ( $sidebar_id == 'sidebar-footer' ) {
-		$total_widgets = wp_get_sidebars_widgets();
-		$sidebar_widgets = count($total_widgets[$sidebar_id]);
-		$params[0]['before_widget'] = str_replace('class="', 'class="col-md-' . floor(12 / $sidebar_widgets) . ' ', $params[0]['before_widget']);
-	    }
-	  return $params;
-	}
-	add_filter('dynamic_sidebar_params','custom_widgets_count');	
+	add_action( 'widgets_init', 'custom_sidebars' );	
 ?>
