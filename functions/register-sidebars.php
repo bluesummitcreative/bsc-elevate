@@ -1,6 +1,5 @@
 <?php
 	// Register Sidebars
-	
 	function custom_sidebars() {
 		register_sidebar( 
 			array(
@@ -26,48 +25,28 @@
 		
 		register_sidebar( 
 			array(
-				'name' => __( 'Footer Widget 1'),
-				'id' => 'footer-widget-1',
-				'before_widget' => '<div class="col-sm-3"><div class="widget">',
+				'name' => __( 'Footer'),
+				'id' => 'footer',
+				'before_widget' => '<div id="%1$s" class="widget %2$s">',
 				'after_widget' => '</div></div>',
-				'before_title' => '<h4>',
-				'after_title' => '</h4>',
-				)
-		);
-		
-		register_sidebar( 
-			array(
-				'name' => __( 'Footer Widget 2'),
-				'id' => 'footer-widget-2',
-				'before_widget' => '<div class="col-sm-3"><div class="widget">',
-				'after_widget' => '</div></div>',
-				'before_title' => '<h4>',
-				'after_title' => '</h4>',
-				)
-		);
-		
-		register_sidebar( 
-			array(
-				'name' => __( 'Footer Widget 3'),
-				'id' => 'footer-widget-3',
-				'before_widget' => '<div class="col-sm-3"><div class="widget">',
-				'after_widget' => '</div></div>',
-				'before_title' => '<h4>',
-				'after_title' => '</h4>',
-				)
-		);
-		
-		register_sidebar( 
-			array(
-				'name' => __( 'Footer Widget 4'),
-				'id' => 'footer-widget-4',
-				'before_widget' => '<div class="col-sm-3"><div class="widget">',
-				'after_widget' => '</div></div>',
-				'before_title' => '<h4>',
+				'before_title' => '<h4 class="widget-title">',
 				'after_title' => '</h4>',
 				)
 		);
 		
 	}
 	add_action( 'widgets_init', 'custom_sidebars' );
+	//Widget Counter
+	function custom_widgets_count($params) {
+ 
+	  $sidebar_id = $params[0]['id'];
+	    /* Footer widgets */
+	    if ( $sidebar_id == 'sidebar-footer' ) {
+		$total_widgets = wp_get_sidebars_widgets();
+		$sidebar_widgets = count($total_widgets[$sidebar_id]);
+		$params[0]['before_widget'] = str_replace('class="', 'class="col-md-' . floor(12 / $sidebar_widgets) . ' ', $params[0]['before_widget']);
+	    }
+	  return $params;
+	}
+	add_filter('dynamic_sidebar_params','custom_widgets_count');	
 ?>
