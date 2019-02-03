@@ -6,18 +6,22 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-sm-12 text-center">
-				<h1><?php
-					if ( is_home() ) { 
-						echo 'Blog';
-					/*} elseif ( is_404() ) { 
-						echo '404 Not Found';*/
+				<h1><?php 
+					if ( is_home() ) {
+						if ( get_field( 'page_header_title',get_option('page_for_posts') ) ) {
+							the_field('page_header_title',get_option('page_for_posts') );
+						} else { echo 'Blog'; }
+					} elseif ( is_404() ) { 
+						echo '404 Not Found';
 					} elseif ( is_post_type_archive() ) {
 						echo post_type_archive_title();
 					} elseif ( is_search() ) { 
 						echo $wp_query->found_posts . ' results found for "' . esc_html( get_search_query( false ) ) .'"';
 
 					} else {
-						the_title();
+						if ( get_field( 'page_header_title') ) {
+							the_field('page_header_title');
+						} else { the_title(); }
 					}
 				?></h1>
 			</div>
