@@ -1,4 +1,4 @@
-<div class="col-sm-9 order-sm-2 content">
+<div class="col-sm-9 order-sm-2">
 	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 	<div class="row post">
 		<?php if(has_post_thumbnail()) { ?>
