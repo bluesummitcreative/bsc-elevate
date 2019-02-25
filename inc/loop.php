@@ -1,9 +1,9 @@
 <?php if ( is_page_template('full-width.php') ) { ?>
-<div class="col-sm-12">
+<div class="col-sm-12 content">
 <?php } elseif ( is_front_page() ) { ?>
-<div class="col-sm-12">
+<div class="col-sm-12 content">
 <?php } else { ?>
-<div class="col-sm-9 order-sm-2">
+<div class="col-sm-9 order-sm-2 content">
 <?php } ?>
 <?php if(has_post_thumbnail()) { ?>
 	<div class="row">
