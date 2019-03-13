@@ -13,10 +13,11 @@
 						the_content();
 					endwhile; endif; 
 
-					if (! is_page_template('full-width.php') || is_front_page() ) {
+				echo '</div>';
+				
+				if (! is_page_template('full-width.php') || is_front_page() ) {
 						get_sidebar();
 					}
-				echo '</div>';
 			?>
 
 		</div>
