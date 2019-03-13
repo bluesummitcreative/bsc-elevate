@@ -1,7 +1,7 @@
 <?php 
 	/*Template Name: Home*/
 	get_header();
-	putRevSlider("slider1", "homepage");
+	putRevSlider("home_slider", "homepage");
 	get_template_part('inc/loop');
 	get_footer(); 
 ?>
